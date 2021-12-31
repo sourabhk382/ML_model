@@ -6,11 +6,8 @@ import pickle
 df = pd.read_csv(r'data\Apparenttemperature.csv')
 df.head()
 df.describe()
-# In[18]:
 df.isnull().sum()
-# In[20]:
 df1 = df[['Temperature (C)', 'Apparent Temperature (C)', 'Humidity', 'Wind Speed (km/h)']]  # required features
-# In[21]:
 reg = linear_model.LinearRegression()
 reg.fit(df1.drop('Apparent Temperature (C)', axis='columns'),
         df1['Apparent Temperature (C)'])  # ax+by+cz+d=>apparent temperature
