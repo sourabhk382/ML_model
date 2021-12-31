@@ -11,7 +11,6 @@ df1 = df[['Temperature (C)', 'Apparent Temperature (C)', 'Humidity', 'Wind Speed
 reg = linear_model.LinearRegression()
 reg.fit(df1.drop('Apparent Temperature (C)', axis='columns'),
         df1['Apparent Temperature (C)'])  # ax+by+cz+d=>apparent temperature
-# In[22]:
 # In[23]:
 # 1.12(temp)+1.05(humidity)-0.09(windspeed)-2.33=apparent temp.
 # In[24]:
