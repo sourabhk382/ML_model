@@ -3,9 +3,9 @@ import pandas as pd
 import numpy as np
 from sklearn import linear_model
 import pickle
-df = pd.read_csv(r'C:\Users\Shubham\PycharmProjects\flask.py\data\Apparenttemperature.csv')
+df = pd.read_csv(r'data\Apparenttemperature.csv')
 df.head()
-df.describe() 
+df.describe()
 # In[18]:
 df.isnull().sum()
 # In[20]:
