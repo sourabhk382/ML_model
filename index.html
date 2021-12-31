@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+    <style>
+body {
+  background-color: linen;
+  margin-left: 30px;
+  text-align:center;
+  line-height: 2.5;
+  font-size: 18px;
+}
+h1 {
+  text-decoration:underline;
+  font-family: "Lucida Console";
+  font-size: 20px;
+  margin-top: 50px;
+}  </style>
+  <title>Apparent temperature Deployment</title>
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Apparent Temperature Prediction</h1>
+
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Temperature" placeholder="Temperature(celsius)" required="required" /></br>
+        <input type="text" name="Humidity" placeholder="Humidity(0 to 1)" required="required" /></br>
+		<input type="text" name="Windspeed" placeholder="Wind speed(km/hr)" required="required" /></br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Apparent temperature prediction</button>
+    </form>
+
+   <br>
+   {{ prediction_text }}
+
+ </div>
+</body>
+</html>
